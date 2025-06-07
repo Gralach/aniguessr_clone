@@ -16,6 +16,9 @@ export default function Layout() {
           <NavLink to="/opening" className="nav-link text-white">
             Guess The Opening
           </NavLink>
+          <NavLink to="/anidle" className="nav-link text-white">
+            Anidle
+          </NavLink>
         </nav>
       </div>
 
