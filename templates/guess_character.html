@@ -1,0 +1,29 @@
+<!-- guess_character.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guess the Character</title>
+</head>
+<body>
+<body style="text-align: center;">
+<h2>{{ level.title() }} Level</h2>
+<p>Enter the name for each character shown:</p>
+
+  <form method="post">
+    <table style="margin: 0 auto;">
+      <tr>
+        {% for img_url in characters %}
+          <td style="padding: 20px; text-align: center;">
+            <img src="{{ img_url }}" width="150"><br>
+            <input type="text" name="guess_{{ loop.index0 }}" placeholder="Enter name..." required>
+          </td>
+        {% endfor %}
+      </tr>
+    </table>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+</html>
